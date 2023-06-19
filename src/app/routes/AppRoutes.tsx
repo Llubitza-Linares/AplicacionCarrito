@@ -15,7 +15,7 @@ export const AppRoutes = () => {
     <TemporaryDrawer
     />}>
     <Route path="" element = {<RequireAuth/>}>
-      <Route path="items" element={<ItemsComponent
+      <Route path="/" element={<ItemsComponent
       />} />
       <Route path="home" element={<HomeComponent
 

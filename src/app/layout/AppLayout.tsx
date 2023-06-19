@@ -15,7 +15,7 @@ import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 
 const listMenu = [
   { name: "Carrito", icon: <ShoppingCartIcon/>, to: "home" },
-  { name: "Items", icon: <ShopIcon />, to: "items" },
+  { name: "Items", icon: <ShopIcon />, to: "/" },
 ];
 
 export default function TemporaryDrawer() {
