@@ -37,7 +37,7 @@ export default function InteractiveList() {
 
   const editarElemento = (item:any) => {
     eliminarElemento(item)
-    navigate("/items")
+    navigate("/")
   
   };
 
