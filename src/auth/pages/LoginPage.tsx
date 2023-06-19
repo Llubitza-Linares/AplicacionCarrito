@@ -5,17 +5,12 @@ import { useDispatch } from "../../context/ContextProvider";
 import { types } from "../../context/storeReducer";
 import { useForm } from 'react-hook-form';
 import useAuth from "../../hooks/useAuth";
-import React, { useRef } from 'react';
 
 
-  
-  
 export const LoginPage = () => {
     const {setAuth} = useAuth();
   const dispatch = useDispatch();
   const navigate = useNavigate();
-
-
 
   const login = () => {
     dispatch({ type: types.login });   

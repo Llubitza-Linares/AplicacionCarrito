@@ -10,11 +10,8 @@ import Typography from '@mui/material/Typography';
 import EditIcon from '@mui/icons-material/Edit';
 import DeleteIcon from '@mui/icons-material/Delete';
 import useItems from '../../hooks/useItems';
-import { Navigate, useNavigate } from 'react-router-dom';
-import { useEffect, useMemo, useState } from 'react';
-import ChecklistIcon from '@mui/icons-material/Checklist';
-
-
+import { useNavigate } from 'react-router-dom';
+import { useEffect, useState } from 'react';
 
 
 const Demo = styled('div')(({ theme }) => ({
@@ -37,19 +34,6 @@ export default function InteractiveList() {
     setItems(nuevosItems);
   };
 
-  const [selectedItems, setSelectedItems] = useState<number[]>([]);
-
-  const itemCount = useMemo(() => {
-    return selectedItems.length;
-  }, [selectedItems]);
-
-  const handleItemClick = (itemId: number) => {
-    if (selectedItems.includes(itemId)) {
-      setSelectedItems(selectedItems.filter(id => id !== itemId));
-    } else {
-      setSelectedItems([...selectedItems, itemId]);
-    }
-  };
 
   const editarElemento = (item:any) => {
     eliminarElemento(item)
@@ -62,22 +46,7 @@ export default function InteractiveList() {
     
     <Box sx={{ flexGrow: 1, maxWidth: 752 }}>
         <Grid item xs={12} md={6}>
-          <div>
-            <ChecklistIcon/>
-       Lista Rapida de Items:
-      {items.map(item => (
-        <div
-          key={item.id}
-          onClick={() => handleItemClick(item.id)}
-          style={{
-            backgroundColor: selectedItems.includes(item.id) ? 'lightblue' : 'white',
-            cursor: 'pointer'
-          }}
-        >
-          {item.subtitle}
-        </div>
-      ))}
-      </div>
+  
 
     <Typography sx={{ mt: 4, mb: 2 }} variant="h6" component="div" >
             Carrito de compras

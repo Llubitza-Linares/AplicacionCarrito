@@ -4,7 +4,6 @@ import { AppRouter } from "./router/AppRouter";
 import { AppTheme } from "./theme";
 import StoreProvider from "./context/ContextProvider";
 import { AuthProvider } from "./context/AuthProvider";
-import { useState } from "react";
 import { ItemProvider } from "./context/ItemsContext";
 
 function App() {
