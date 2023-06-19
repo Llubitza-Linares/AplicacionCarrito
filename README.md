@@ -15,3 +15,5 @@ Aplicacion de carrito de compras, utilizando el conocimiento adquirido en las cl
 * React-hook-form
 * Material UI
 * Guards
+* Pantalla con edit y eliminar
+* Buenas practicas
